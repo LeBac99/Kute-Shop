@@ -3,15 +3,14 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>KOTE SHOP </a>
                     </li>
-                    <li class="menu-title">UI elements</li><!-- /.menu-title -->
+                    <li class="menu-title">BẢNG ĐIỀU KHIỂN</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Components</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Cài đặt chung</a>
                         <ul class="sub-menu children dropdown-menu">                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
                             <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
-
                             <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
                             <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
                             <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
@@ -22,10 +21,10 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-table"></i>Cài đặt banner</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-basic.html">N/a</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">N/a</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -36,20 +35,20 @@
                         </ul>
                     </li>
 
-                    <li class="menu-title">Icons</li><!-- /.menu-title -->
+                    <li class="menu-title">Cửa hàng</li><!-- /.menu-title -->
 
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Icons</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Danh mục</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
                             <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-email"></i>Widgets </a>
+                        <a href="widgets.html"> <i class="menu-icon ti-email"></i>Bài viết</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Charts</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Sản phẩm</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Chart JS</a></li>
                             <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Flot Chart</a></li>
@@ -64,7 +63,7 @@
                             <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Vector Maps</a></li>
                         </ul>
                     </li>
-                    <li class="menu-title">Extras</li><!-- /.menu-title -->
+                    <li class="menu-title">Đơn Hàng</li><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
                         <ul class="sub-menu children dropdown-menu">
