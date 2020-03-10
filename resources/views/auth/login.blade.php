@@ -48,11 +48,11 @@
                         @csrf
                         <div class="form-group">
                             <label>Email </label>
-                            <input type="email" name="email" class="form-control" placeholder="Email" require>
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
                         <div class="checkbox">
                             <label>
