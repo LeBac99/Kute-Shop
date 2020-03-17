@@ -23,6 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
   <script src="admin/assets/js/init/fullcalendar-init.js"></script>
+<!-- bootrap -->
 
   <!--Local Stuff-->
   <script>
@@ -288,6 +289,32 @@
           $('#bootstrap-data-table-export').DataTable();
       });
   </script>
-  
-
   <!-- endatatable -->
+  <!-- image -->
+  <script type="text/javascript">
+$(document).ready(function() {
+    $('#editor').wysihtml5();
+});
+
+function getBase64(file, selector) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+        $(selector).attr('src', reader.result);
+    };
+    reader.onerror = function(error) {
+        console.log('Error: ', error);
+    };
+}
+var img = document.querySelector('#product_image');
+img.onchange = function() {
+    var file = this.files[0];
+    if (file == undefined) {
+        $('#imageTarget').attr('src', "{{url('/')}}/admin/images/default.png");
+    } else {
+        getBase64(file, '#imageTarget');
+    }
+}
+</script>
+
+  <!-- endimage -->

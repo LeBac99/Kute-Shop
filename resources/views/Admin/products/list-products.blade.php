@@ -2,11 +2,11 @@
 @section('content')
 <div class="animated fadeIn">
     <div class="row">
-
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <strong class="card-title">Data Table</strong>
+                    <strong class="card-title">Danh sách sản phẩm</strong>
+                    <strong class="card-title float-right"><button type="button" class="btn btn-outline-primary"><a href="#">Thêm sản phẩm</a></button></strong>
                 </div>
                 <div class="card-body">
                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
