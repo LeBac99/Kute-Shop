@@ -10,14 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Support\Facades\Route;
 // client
 Route::get('/', function () {
     return view('client.index');
 });
 // end client
 //admin
-Route::get('admin1', function () {
-    return view('admin.hompage');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('index', function () {
+        return view('admin.hompage');
+    });
+    Route::get('products',function(){
+        return view('admin.products.list-products');
+    });
 });
 //admin
