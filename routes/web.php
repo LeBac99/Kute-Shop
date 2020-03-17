@@ -24,5 +24,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('products',function(){
         return view('admin.products.list-products');
     });
+    Route::group(['prefix'=>'Category'],function(){
+    	Route::get('','Admin\CategoryController@Category')->name('get.Category');
+    	Route::get('addCategory','Admin\CategoryController@addCategory')->name('get.addCategory');
+    	Route::get('editCategory','Admin\CategoryController@editCategory')->name('get.editCategory');
+    });
 });
 //admin
