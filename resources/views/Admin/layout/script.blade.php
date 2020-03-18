@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
   <script src="admin/assets/js/init/fullcalendar-init.js"></script>
-<!-- bootrap -->
+  <!-- bootrap -->
 
   <!--Local Stuff-->
   <script>
@@ -290,12 +290,10 @@
       });
   </script>
   <!-- endatatable -->
-  <!-- image -->
   <script type="text/javascript">
 $(document).ready(function() {
     $('#editor').wysihtml5();
 });
-
 function getBase64(file, selector) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
@@ -316,5 +314,3 @@ img.onchange = function() {
     }
 }
 </script>
-
-  <!-- endimage -->

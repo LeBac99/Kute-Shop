@@ -23,14 +23,10 @@ Route::group(['prefix' => 'admin'], function () {
         return view('admin.hompage');
     });
     Route::group(['prefix' => 'products'], function () {
-        Route::get('/', function () {
-            return view('admin.products.list-products');
-        });
+        Route::get('/', 'ProductController@getData');
         Route::get('add-product',function(){
            return view('admin.products.add_form'); 
         });
-
-
     });
 });
 //admin

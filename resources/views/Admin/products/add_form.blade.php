@@ -15,16 +15,27 @@
                     </div>
                     <small class="form-text text-muted">ex. 99/99/9999</small>
                 </div>
+
                 <div class="form-group">
-                    <label class=" form-control-label">Phone input</label>
+                    <label class=" form-control-label">Danh mục chính</label>
                     <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                        <input class="form-control">
+                        <select class="form-control province" name="province">
+                            <option value="0" disabled="true" selected="true">-- Danh mục --</option>
+                            <option value=""></option>
+                        </select>
                     </div>
-                    <small class="form-text text-muted">ex. (999) 999-9999</small>
                 </div>
                 <div class="form-group">
-                    <label class=" form-control-label">Taxpayer Identification Numbers</label>
+                    <label class=" form-control-label">Danh mục phụ</label>
+                    <div class="input-group">
+                        <select class="form-control province" name="province">
+                            <option value="0" disabled="true" selected="true">-- Danh mục --</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" form-control-label">Giá sản phẩm</label>
                     <div class="input-group">
                         <div class="input-group-addon"><i class="fa fa-usd"></i></div>
                         <input class="form-control">
@@ -32,25 +43,25 @@
                     <small class="form-text text-muted">ex. 99-9999999</small>
                 </div>
                 <div class="form-group">
-                    <label class=" form-control-label">Social Security Number</label>
+                    <label class=" form-control-label">Giá khuyến mại</label>
                     <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                        <div class="input-group-addon"><i class="fa fa-usd"></i></div>
                         <input class="form-control">
                     </div>
                     <small class="form-text text-muted">ex. 999-99-9999</small>
                 </div>
                 <div class="form-group">
-                    <label class=" form-control-label">Eye Script</label>
+                    <label class=" form-control-label">Đánh giá</label>
                     <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                        <div class="input-group-addon"><i class="fa fa-star"></i></div>
                         <input class="form-control">
                     </div>
                     <small class="form-text text-muted">ex. ~9.99 ~9.99 999</small>
                 </div>
                 <div class="form-group">
-                    <label class=" form-control-label">Credit Card Number</label>
+                    <label class=" form-control-label">Số lượng</label>
                     <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                        <div class="input-group-addon"><i class="fa fa-sort-amount-asc"></i></div>
                         <input class="form-control">
                     </div>
                     <small class="form-text text-muted">ex. 9999 9999 9999 9999</small>
@@ -64,6 +75,12 @@
                     <label class=" form-control-label">Chọn ảnh</label>
                     <div class="input-group">
                         <input type="file" class="form-control" id="product_image">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class=" form-control-label">Mô tả sản phẩm</label>
+                    <div class="input-group">
+                        <textarea class="form-control" placeholder="mô tả.." style="height: 203px"></textarea>
                     </div>
                 </div>
             </div>
@@ -83,6 +100,20 @@
                                 <div class="col-2">S</div>
                                 <div class="col-2">M</div>
                                 <div class="col-2">L</div>
+                            </div>
+                            <hr>
+                            <div class="row mt-4">
+                                <div class="col-2"><input type="radio" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></div>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="form-group">
+                                        <label class=" form-control-label">Thêm Giá</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-plus-square"></i></div>
+                                            <input class="form-control">
+                                        </div>
+                                        <button type="button" class="btn btn-outline-success btn-sm mt-2">Thêm</button>
+                                    </div>
+                                </div>
                             </div>
                             <hr>
                             <div class="form-group">
@@ -109,13 +140,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 h-2">
             <div class="text-center">
                 <a href="/" title="" class="btn btn-danger">Quay lại</a>
-                <input class="btn btn-success" type="submit" value="Submit">
+                <input class="btn btn-success" type="submit" value="Lưu">
             </div>
         </div>
+        </br>
     </div>
-
 </div>
+
 @endsection
