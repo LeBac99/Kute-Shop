@@ -18,46 +18,26 @@
                                         	<th>Id</th>
                                             <th>Name</th>
                                             <th>Slug</th>
-                                            <th>Decription</th>
+                                            <th>Description</th>
                                             <th>Parent Id</th>
                                              <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($category as $cate)
                                         <tr>
-                                            <td>Tiger Nixon fffffffffffffff</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
-                                            <td>$1</td>
+                                            <td>{{$cate->id}}</td>
+                                            <td>{{$cate->name}}</td>
+                                            <td>{{$cate->slug}}</td>
+                                            <td>{{$cate->description}}</td>
+                                            <td>{{$cate->parent_id}}</td>
                                             <td>
-                                                <a href="{{route('get.editCategory')}}" type="button" class="btn btn-warning">Edit</a>
-                                                <a href="" type="button" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('get.editCategory',['id'=>$cate->id])}}" type="button" class="btn btn-warning">Edit</a>
+                                                <a onclick="return Delcate()" href="{{route('get.deleteCategory',['id'=>$cate->id])}}" type="button" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>$170,750</td>
-                                            <td>$1</td>
-                                            <td>
-                                               <a href="{{route('get.editCategory')}}" type="button" class="btn btn-warning">Edit</a>
-                                                <a href="" type="button" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>$86,000</td>
-                                            <td>$1</td>
-                                            <td>
-                                                <a href="{{route('get.editCategory')}}" type="button" class="btn btn-warning">Edit</a>
-                                                <a href="" type="button" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
-
+                                        @endforeach
+                                       
                                         
                                     </tbody>
                                 </table>

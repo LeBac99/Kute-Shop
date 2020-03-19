@@ -27,7 +27,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::group(['prefix'=>'Category'],function(){
     	Route::get('','Admin\CategoryController@Category')->name('get.Category');
     	Route::get('addCategory','Admin\CategoryController@addCategory')->name('get.addCategory');
-    	Route::get('editCategory','Admin\CategoryController@editCategory')->name('get.editCategory');
+    	Route::get('editCategory/{id}','Admin\CategoryController@editCategory')->name('get.editCategory');
+        Route::get('deleteCategory/{id}','Admin\CategoryController@deleteCategory')->name('get.deleteCategory');
+        Route::post('postAddCategory','Admin\CategoryController@postAddCategory')->name('post.addCategory');
+        Route::post('posteditCategory/{id}','Admin\CategoryController@posteditCategory')->name('post.editCategory');
     });
 });
 //admin

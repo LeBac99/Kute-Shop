@@ -23,7 +23,13 @@
   <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
   <script src="admin/assets/js/init/fullcalendar-init.js"></script>
-
+  
+ <!--Delcate-->
+ <script type="text/javascript">
+   function Delcate(){
+    return confirm('Bạn muốn xóa danh mục sản phẩm ');
+  }
+ </script>
   <!--Local Stuff-->
   <script>
       jQuery(document).ready(function($) {
@@ -288,6 +294,19 @@
           $('#bootstrap-data-table-export').DataTable();
       });
   </script>
+  <script type="text/javascript" src="ckeditor/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript">
+    CKEDITOR.replace( 'editor1', {
+        filebrowserBrowseUrl: "ckeditor/ckfinder/ckfinder.html",
+        filebrowserImageBrowseUrl: "ckeditor/ckfinder/ckfinder.html?type=Images",
+        filebrowserFlashBrowseUrl: "ckeditor/ckfinder/ckfinder.html?type=Flash",
+        filebrowserUploadUrl: "ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files",
+        filebrowserImageUploadUrl: "ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images",
+        filebrowserFlashUploadUrl: "ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash",
+    } );
+</script>
+
+
   
 
   <!-- endatatable -->
