@@ -10,9 +10,11 @@ use App\Model\{Category};
 class CategoryController extends Controller
 {
     public function Category(){
-    	$category = Category::all();
-    	//dd($category);
-    	return view('Admin.category.category',compact('category'));
+    	$category = Category::where('parent_id',0)->get();
+       // dd($category);
+        $cateall = Category::all()->toArray();
+    	//dd($cateall);
+    	return view('Admin.category.category',compact('category','cateall'));
     }
     public function addCategory(Request $Request){
 
@@ -27,27 +29,35 @@ class CategoryController extends Controller
     	return view('Admin.category.edit_category',compact('cate','category'));
     }
     public function postAddCategory(addCategoryRequest $Request){
+        if(checkgiaodien(Category::all()->toArray(),$Request->parent_id,1)>2){
+             return redirect()->back()->with('thongbao','Giao diện không hỗ trợ menu 3 cấp');        
+        }
         $cate = new Category();
         $cate->name = $Request->name;
         $cate->slug = Str::slug($Request->name);
         $cate->description = $Request->description;
         $cate->parent_id = $Request->parent_id;
         $cate->save();
-        return redirect()->route('get.Category');    
+        return redirect()->route('get.Category')->with('thongbao','Thêm thành công!');
     } 
     public function posteditCategory(addCategoryRequest $Request, $id){
+        if(checkgiaodien(Category::all()->toArray(),$Request->parent_id,1)>2){
+             return redirect()->back()->with('thongbao','Giao diện không hỗ trợ menu 3 cấp');        
+        }
         $cate = Category::find($id);
         $cate->name = $Request->name;
         $cate->slug = Str::slug($Request->name);
         $cate->description = $Request->description;
         $cate->parent_id = $Request->parent_id;
         $cate->save();
-        return redirect()->route('get.Category');    
+        return redirect()->route('get.Category')->with('thongbao','Sửa thành công!');    
     }
     public function deleteCategory($id){
         $cate = Category::find($id);
         $c = Category::where('parent_id',$id)->get();
-        dd($c);
+        foreach($c as $cc){
+            $cc->delete();
+        }
         $cate->delete();
         return redirect()->back(); 
     }

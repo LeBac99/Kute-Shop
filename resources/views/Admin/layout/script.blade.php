@@ -27,7 +27,10 @@
  <!--Delcate-->
  <script type="text/javascript">
    function Delcate(){
-    return confirm('Bạn muốn xóa danh mục sản phẩm ');
+    return confirm('Bạn muốn xóa tất cả danh mục ');
+  }
+  function Dellcate(){
+    return confirm('Bạn muốn xóa danh mục ');
   }
  </script>
   <!--Local Stuff-->

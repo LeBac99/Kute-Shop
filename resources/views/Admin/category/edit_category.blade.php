@@ -13,6 +13,12 @@
                                         <div class="card-title">
                                             <h3 class="text-center">Sửa danh mục</h3>
                                         </div>
+                                        @if(session('thongbao'))
+                                            <div class="alert alert-danger">
+                                                {{session('thongbao')}}
+                                            </div>
+                                            
+                                        @endif
                                         <form action="{{route('post.editCategory',['id'=>$cate->id])}}" method="post" >
                                             @csrf
                                             <div class="row form-group">
